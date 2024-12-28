@@ -1,4 +1,4 @@
-# Flask Notes
+## Flask Notes
 
 A notes made with HTML + CSS with Flask as the backend. The frontend is built with HTML and CSS. The backend is built with Flask.
 Uses a notes.json in api/notes.json.
@@ -6,8 +6,7 @@ Is very simple, not meant to be used in production.
 
 ## Installation
 
-```pip install -r requirements.txt
-```
+```pip install -r requirements.txt```
 
 ## Usage
 
