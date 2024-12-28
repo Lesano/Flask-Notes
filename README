@@ -1,0 +1,34 @@
+# Flask Notes
+
+A notes made with HTML + CSS with Flask as the backend. The frontend is built with HTML and CSS. The backend is built with Flask.
+Uses a notes.json in api/notes.json.
+Is very simple, not meant to be used in production.
+
+## Installation
+
+```pip install -r requirements.txt
+```
+
+## Usage
+
+Linux: ```python3 api/index.py``` or ```python api/index.py```
+Windows: ```py3 api/index.py``` or ```py api/index.py```
+
+After running the script, open a web browser and navigate to ```http://127.0.0.1:8080``` or ```http://localhost:8080```
+If you want change ip port open index.py in api/index.py and change ```app.route(host="0.0.0.0", port=¨8080¨)```
+
+# API Endpoints
+```/``` - Home page
+```/xp``` - Home page with XP Css
+```/add_note``` - [POST method only] add a note ot notes.json
+
+## Contributing
+
+Pull requests are welcome. For major changes, please open an issue first
+to discuss what you would like to change.
+
+Please make sure to update tests as appropriate.
+
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)

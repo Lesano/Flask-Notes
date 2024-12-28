@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/xp.css">
+    <title>Notes XP</title>
+    <style>
+        body {
+            background-color: #ece9d8;
+        }
+        .title-bar {
+            color: #fff;
+        }
+        .window-body {
+            align-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <section class="addnotes">
+        <div class="window">
+            <div class="title-bar">Notes XP | Total: {{note_count}}</div>
+                <div class="window-body">
+                    <form action="/add_note" method="POST" class="addnote">
+                        <div class="form-group">
+                            <label for="author">Author:</label>
+                            <input type="text" id="author" name="author" placeholder="Enter your name" class="form-control-sm" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="note">Title:</label>
+                            <input type="text" id="note" name="note" placeholder="Enter note title" class="form-control-sm" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="text">Note text:</label>
+                            <input type="text" id="text" name="text" placeholder="Enter your note" class="form-control-sm" required>
+                        </div>
+                        <button type="submit" class="btn btn-outline-light btn-sm">Add Note</button>
+                    </form>
+                        
+                </div>
+                </div>
+          </div>
+        
+    </section>
+    <section class="notes">
+        {% if data.notes %}
+            {% for note in data.notes %}
+                <div class="window" style="margin-top: 10px;">
+                    <div class="title-bar">{{note.title}} | By: {{note.author}}
+                      <div class="title-bar-text"></div>
+                    </div>
+                    <div class="window-body">
+                      <p>{{note.note}}</p>
+                    </div>
+                  </div>
+            {% endfor %}
+        {% else%}
+            <p>Notes not found...</p>
+        {% endif %}
+    </section>
+    
+</body>
+</html>
